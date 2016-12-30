@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ziletech.app.action;
 
 import com.cong.logiware.hibernate.dao.UserDAO;
+import com.cong.logiware.struts.LogiwareDispatchAction;
 import com.ziletech.app.form.LoginForm;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -18,14 +13,13 @@ import org.apache.struts.action.ActionMapping;
  *
  * @author admin
  */
-public class LoginAction extends Action {
+public class LoginAction extends LogiwareDispatchAction {
 
     private static final String HOME = "home";
     private static final String FAILURE = "failure";
     private static final String LOGIN_ERROR = "Wrong username or password!";
 
-    @Override
-    public ActionForward execute(ActionMapping mapping, ActionForm form,
+    public ActionForward login(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
 
