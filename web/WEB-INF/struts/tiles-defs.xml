@@ -1,0 +1,22 @@
+<tiles-definitions>
+    <definition name=".mainLayout" page="/tiles/blueTemplate/template.jsp">
+        <put name="title" type="string" value="Welcome" />
+        <put name="top" value="/tiles/blueTemplate/top.jsp" />       
+        <put name="menu" value="/tiles/blueTemplate/menu.jsp" />
+        <put name="body" value="/tiles/blueTemplate/content.jsp" />
+        <put name="bottom" value="/tiles/blueTemplate/bottom.jsp" />
+    </definition>
+
+    <definition name="jsp.home" extends=".mainLayout">
+        <put name="body" value="/jsp/base/home/home.jsp" />
+    </definition>
+
+    <definition name="jsp.login" extends=".mainLayout">
+        <put name="body" value="/jsp/login.jsp" />
+    </definition>
+
+    <definition name="jsp.tab" extends=".mainLayout">
+        <put name="body" value="/jsp/tab.jsp" />
+    </definition>
+    
+</tiles-definitions>

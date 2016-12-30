@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="commonForm" type="com.cong.logiware.base.struts.form.CommonForm" />
+    </form-beans>
+
+    <global-exceptions>
+        
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="fatal" path="/jsp/base/common/fatal.jsp"/>
+        <forward name="alert" path="/jsp/base/common/alert.jsp"/>
+        <forward name="message" path="/jsp/base/common/message.jsp"/>
+        <forward  name="publicHome" path="/public.do?action=home" redirect="false"/>
+    </global-forwards>
+
+    <action-mappings>
+
+        <action path="/common"
+                type="com.cong.logiware.base.struts.action.CommonAction"
+                name="commonForm"
+                scope="request"
+                input="/jsp/base/common/fatal.jsp"
+                parameter="action"
+                validate="true">            
+            <forward name="success" path="/jsp/base/common/fatal.jsp"/>
+            <forward name="TP_address" path="/jsp/base/common/action/tradingPatnerAddress.jsp"/> 
+        </action>
+    </action-mappings>
+
+    <message-resources parameter="com/cong/logiware/struts/ApplicationResource"/>
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/struts/tiles-defs.xml" />
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/struts/validator-rules.xml,/WEB-INF/struts/validation.xml"/>
+    </plug-in>
+</struts-config>
