@@ -9,7 +9,7 @@
                 <h1>Login or Create a Free Account!</h1>
             </div>
             <p>Lorem iopsum dolor sit amit,consetetur sadipscing eliter,sed diam voluptua.At vero  eso et accusam et justo duo dolores et ea rebum. </p>
-
+  
             <ul class="left-form">
                 <h2>New Account:</h2>
                 <li>
@@ -36,6 +36,7 @@
                 <input type="submit" onclick="myFunction()" value="Create Account">
                 <div class="clear"> </div>
             </ul>
+ 
             <ul class="right-form">
                 <cong:form action="login.do?action=login" method="post" name="loginForm">
                     <h3>Login:</h3>
