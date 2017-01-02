@@ -1,6 +1,6 @@
+<%@include file="/head.jsp" %>
 <html>
     <head>
-        <%@include file="/jsp/head.jsp" %>
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     </head>
     <body>
@@ -9,7 +9,7 @@
                 <h1>Login or Create a Free Account!</h1>
             </div>
             <p>Lorem iopsum dolor sit amit,consetetur sadipscing eliter,sed diam voluptua.At vero  eso et accusam et justo duo dolores et ea rebum. </p>
-
+  
             <ul class="left-form">
                 <h2>New Account:</h2>
                 <li>
@@ -36,20 +36,21 @@
                 <input type="submit" onclick="myFunction()" value="Create Account">
                 <div class="clear"> </div>
             </ul>
+ 
             <ul class="right-form">
-                <html:form action="login" method="post">
+                <cong:form action="login.do?action=login" method="post" name="loginForm">
                     <h3>Login:</h3>
                     <c:if test="${not empty loginForm.errorMessage}">
                         <div class="error">${loginForm.errorMessage}</div>
                     </c:if>
                     <div>
-                        <li><html:text  property="userName"/></li>
-                        <li><html:password  property="password"/></li>
+                        <li><cong:text  name="userName"/></li>
+                        <li><cong:text  name="password"/></li>
                         <h4>I forgot my Password!</h4>
                         <input type="submit" onclick="myFunction()" value="Login" >
                     </div>
                     <div class="clear"> </div>
-                </html:form>
+                </cong:form>
             </ul>
             <div class="clear"> </div>
 

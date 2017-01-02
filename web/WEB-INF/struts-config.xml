@@ -19,8 +19,10 @@
                 name="loginForm" 
                 path="/login" 
                 scope="session" 
+                parameter="action"
                 type="com.ziletech.app.action.LoginAction">
             <forward name="failure"  path="/jsp/registration/login.jsp"/>
+            
         </action>
         <action path="/loginPage" forward="/jsp/registration/login.jsp"/>
 
