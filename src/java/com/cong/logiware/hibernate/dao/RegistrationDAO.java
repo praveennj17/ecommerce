@@ -19,9 +19,7 @@ public class RegistrationDAO extends BaseHibernateDAO<Registration>{
         super(Registration.class);
     }
 
-    public void saveOrUpdate(RegistrationForm registrationForm) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  
 
     
 }

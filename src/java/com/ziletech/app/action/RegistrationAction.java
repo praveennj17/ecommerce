@@ -1,7 +1,7 @@
 package com.ziletech.app.action;
 
-
 import com.cong.logiware.hibernate.dao.RegistrationDAO;
+import com.cong.logiware.hibernate.entity.Registration;
 import com.cong.logiware.struts.LogiwareDispatchAction;
 import com.ziletech.app.form.RegistrationForm;
 import javax.servlet.http.HttpServletRequest;
@@ -16,9 +16,7 @@ import org.apache.struts.action.ActionMapping;
  */
 public class RegistrationAction extends LogiwareDispatchAction {
 
-
     private static final String SUCCESS = "success";
-  
 
     public ActionForward registration(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
@@ -26,10 +24,16 @@ public class RegistrationAction extends LogiwareDispatchAction {
 
         RegistrationForm registrationForm = (RegistrationForm) form;
 
-     RegistrationDAO registrationDAO = new RegistrationDAO();
-    registrationDAO.saveOrUpdate(registrationForm);
-            return mapping.findForward(SUCCESS);
-        }
+
+
+
+
+        RegistrationDAO registrationDAO = new RegistrationDAO();
+        Registration registration = new Registration();
+registration.setUserName(registrationForm.getUserName());
+registration.setEmail(registrationForm.getEmail());
+registration.setPassword(registrationForm.getPassword());
+        registrationDAO.saveOrUpdate(registration);
+        return mapping.findForward(SUCCESS);
     }
-
-
+}

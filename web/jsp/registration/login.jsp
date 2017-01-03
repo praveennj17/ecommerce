@@ -231,6 +231,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="error">${loginForm.errorMessage}</div>
                             </c:if>
                             <input type="submit" onclick="myFunction()" value="Login" >
+                          
                         </cong:form>
                     </div>
                     <div class="col-md-6 login-right">
