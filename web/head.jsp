@@ -4,7 +4,10 @@
 <%@include file="/taglib.jsp" %>
 <c:set var="path" value="${pageContext.request.contextPath}" />
 <!-- CSS -->
-<link href="${path}/css/main.css" type="text/css" rel="stylesheet" />
+<!--<link href="${path}/css/main.css" type="text/css" rel="stylesheet" />-->
+<link href="${path}/css/bootstrap.css" type="text/css" rel="stylesheet" />
+<link href="${path}/css/flexslider.css" type="text/css" rel="stylesheet" />
+<link href="${path}/css/style.css" type="text/css" rel="stylesheet" />
 
 <!-- JAVA SCRIPT -->
 <!--<script src="${path}/js/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>-->
