@@ -2,7 +2,7 @@
 SQLyog Community Edition- MySQL GUI v8.2 
 MySQL - 5.6.34-log : Database - ziletech
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -16,39 +16,21 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`ziletech` /*!40100 DEFAULT CHARACTER SE
 
 USE `ziletech`;
 
-/*Table structure for table `address` */
+/*Table structure for table `registration` */
 
-DROP TABLE IF EXISTS `address`;
+DROP TABLE IF EXISTS `registration`;
 
-CREATE TABLE `address` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `city` varchar(255) DEFAULT NULL,
-  `country` varchar(255) DEFAULT NULL,
-  `zip` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+CREATE TABLE `registration` (
+  `id` int(30) NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) DEFAULT NULL,
+  `username` varchar(15) DEFAULT NULL,
+  `password` varchar(16) DEFAULT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-/*Data for the table `address` */
+/*Data for the table `registration` */
 
-insert  into `address`(`id`,`user_id`,`city`,`country`,`zip`) values (3,6,'a',NULL,NULL),(4,6,'b',NULL,NULL);
-
-/*Table structure for table `user` */
-
-DROP TABLE IF EXISTS `user`;
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login_name` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `first_name` varchar(255) DEFAULT NULL,
-  `last_name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-
-/*Data for the table `user` */
-
-insert  into `user`(`id`,`login_name`,`password`,`first_name`,`last_name`) values (6,'admin','admin','Admin','Admin');
+insert  into `registration`(`id`,`email`,`username`,`password`) values (1,'askjbf','nag','skjfn');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
