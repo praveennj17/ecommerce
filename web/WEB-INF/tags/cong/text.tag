@@ -1,8 +1,3 @@
-<%--
-    Document   : sun
-    Created on : Jun 4, 2010, 8:09:44 PM
-    Author     : sunil
---%>
 <%@taglib tagdir="/WEB-INF/tags/cong" prefix="cong" %>
 <%@taglib uri="/WEB-INF/tld/c.tld" prefix="c"%>
 <%@taglib uri="/WEB-INF/tld/struts-html.tld" prefix="html"%>

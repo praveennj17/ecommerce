@@ -1,4 +1,4 @@
 .class
-/dist
-/nbproject
-/build/
+dist/
+nbproject/
+build/
