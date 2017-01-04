@@ -7,19 +7,15 @@ package com.cong.logiware.hibernate.dao;
 
 import com.cong.logiware.hibernate.BaseHibernateDAO;
 import com.cong.logiware.hibernate.entity.Registration;
-import com.ziletech.app.form.RegistrationForm;
-
 
 /**
  *
  * @author admin
  */
-public class RegistrationDAO extends BaseHibernateDAO<Registration>{
-      public RegistrationDAO() {
+public class RegistrationDAO extends BaseHibernateDAO<Registration> {
+
+    public RegistrationDAO() {
         super(Registration.class);
     }
 
-  
-
-    
 }

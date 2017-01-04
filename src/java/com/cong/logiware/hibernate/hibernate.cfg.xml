@@ -5,5 +5,6 @@
   <session-factory>
    <mapping class="com.cong.logiware.hibernate.entity.User"/>
    <mapping class="com.cong.logiware.hibernate.entity.Address"/>
+      <mapping class="com.cong.logiware.hibernate.entity.Registration"/>
   </session-factory>
 </hibernate-configuration>
