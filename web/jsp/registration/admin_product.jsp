@@ -17,8 +17,9 @@
             <div class="container">
 
                 <div class="product-main" >
-                    <h1>PRODUCT PAGE</h1>
-                    <h2>Informations</h2>
+                   
+                    <h2>Product Page ...</h2>
+                    <br>
                     <cong:form action="product.do?action=product" method="post" name="Admin_ProductForm">
                         <label>CATEGORY</label>
                         <br><cong:text name="category"/><br>

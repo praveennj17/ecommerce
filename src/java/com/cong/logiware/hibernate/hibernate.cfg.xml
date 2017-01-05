@@ -6,7 +6,7 @@
         <mapping class="com.cong.logiware.hibernate.entity.User"/>
         <mapping class="com.cong.logiware.hibernate.entity.Address"/>
         <mapping class="com.cong.logiware.hibernate.entity.Registration"/>
-        <mapping class="com.cong.logiware.hibernate.entity.Product"/>
+        <mapping class="com.cong.logiware.hibernate.entity.AdminProduct"/>
         <mapping class="com.cong.logiware.hibernate.entity.Admin"/>
     </session-factory>
 </hibernate-configuration>

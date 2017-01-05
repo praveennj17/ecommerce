@@ -1,7 +1,7 @@
 package com.ziletech.app.action;
 
-import com.cong.logiware.hibernate.dao.ProductDAO;
-import com.cong.logiware.hibernate.entity.Product;
+import com.cong.logiware.hibernate.dao.AdminProductDAO;
+import com.cong.logiware.hibernate.entity.AdminProduct;
 import com.cong.logiware.struts.LogiwareDispatchAction;
 import com.ziletech.app.form.Admin_ProductForm;
 import javax.servlet.http.HttpServletRequest;
@@ -24,13 +24,13 @@ public class Admin_ProductAction extends LogiwareDispatchAction {
 
         Admin_ProductForm admin_productForm = (Admin_ProductForm) form;
 
-        ProductDAO productDAO = new ProductDAO();
-        Product product = new Product();
-        product.setCategory(admin_productForm.getCategory());
-        product.setName(admin_productForm.getName());
-        product.setPrice(admin_productForm.getPrice());
-        product.setDescription(admin_productForm.getDescription());
-       productDAO.saveOrUpdate(product);
+        AdminProductDAO productDAO = new AdminProductDAO();
+        AdminProduct adminproduct = new AdminProduct();
+       adminproduct.setCategory(admin_productForm.getCategory());
+        adminproduct.setName(admin_productForm.getName());
+        adminproduct.setPrice(admin_productForm.getPrice());
+        adminproduct.setDescription(admin_productForm.getDescription());
+       productDAO.saveOrUpdate(adminproduct);
        
         return mapping.findForward(SUCCESS);
 
