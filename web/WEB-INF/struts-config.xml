@@ -8,11 +8,15 @@
 <struts-config>
     <form-beans>
         <form-bean name="loginForm" type="com.ziletech.app.form.LoginForm"/>
-         <form-bean name="registrationForm" type="com.ziletech.app.form.RegistrationForm"/>
+        <form-bean name="registrationForm" type="com.ziletech.app.form.RegistrationForm"/>
+        <form-bean name="Admin_ProductForm" type="com.ziletech.app.form.Admin_ProductForm"/>
+         <form-bean name="Admin_LoginForm" type="com.ziletech.app.form.Admin_LoginForm"/>
     </form-beans>
 
     <global-forwards>
         <forward name="home" path="/jsp/home/home.jsp"/>
+         <forward name="adminhome" path="/jsp/registration/admin_home.jsp"/>
+         
         <!--            <forward name="RegistrationPage" path="/jsp/signup.jsp"/>-->
     </global-forwards>
 
@@ -24,27 +28,70 @@
                 parameter="action"
                 type="com.ziletech.app.action.LoginAction">
             <forward name="failure"  path="/jsp/registration/login.jsp"/>
-         </action>
+        </action>
         <action path="/loginPage" forward="/jsp/registration/login.jsp"/>
-      
+        
+        
+          <action input="/jsp/registration/admin_login.jsp" 
+                name="Admin_LoginForm" 
+                path="/adminlogin" 
+                scope="session" 
+                parameter="action"
+                type="com.ziletech.app.action.Admin_LoginAction">
+            <forward name="failure"  path="/jsp/registration/admin_login.jsp"/>
+            
+        </action>
+         <action path="/adminloginPage" forward="/jsp/registration/admin_login.jsp"/>
+        
 
         <action
             scope="request"
             path="/RegistrationPage"
             parameter="action"
             type="com.ziletech.app.action.RegistrationPageAction" >              
-          </action>
+        </action>
         <action path="/RegistrationPage" forward="/jsp/registration/signup.jsp"/>
 
         
-         <action input="/jsp/registration/signup.jsp" 
-                name="registrationForm" 
-                path="/registration" 
-                scope="session" 
-                parameter="action"
-                type="com.ziletech.app.action.RegistrationAction">
+        
+        <action
+            scope="request"
+            path="/addproductpage"
+            parameter="action"
+            type="com.ziletech.app.action.AdminPageAction" >              
+        </action>
+        <action path="/adminPage" forward="/jsp/registration/admin_product.jsp"/>
+
+        
+        
+        <action input="/jsp/registration/signup.jsp" 
+                 name="registrationForm" 
+                 path="/registration" 
+                 scope="session" 
+                 parameter="action"
+                 type="com.ziletech.app.action.RegistrationAction">
             <forward name="success"  path="/jsp/registration/login.jsp"/>
-         </action>
+        </action>
+         
+        <action input="/jsp/registration/admin_product.jsp" 
+                 name="Admin_ProductForm" 
+                 path="/product" 
+                 scope="session" 
+                 parameter="action"
+                 type="com.ziletech.app.action.Admin_ProductAction">
+            <forward name="success"  path="/jsp/registration/admin_product.jsp"/>
+
+        </action>
+       
+         
+    
+        
+        
+        <action input="/" name="loginForm" path="/admin" scope="session" type="com.ziletech.app.action.Admin_LoginAction"/>
+        
+        
+         
+
     </action-mappings>
     
     

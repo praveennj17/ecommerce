@@ -1,11 +1,9 @@
 package com.ziletech.app.action;
 
 import com.cong.logiware.hibernate.dao.UserDAO;
-<<<<<<< HEAD
 import com.cong.logiware.service.OrderService;
-=======
 import com.cong.logiware.struts.LogiwareDispatchAction;
->>>>>>> b1b8cfbc58cb305437264276bc5af04334799eef
+
 import com.ziletech.app.form.LoginForm;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
