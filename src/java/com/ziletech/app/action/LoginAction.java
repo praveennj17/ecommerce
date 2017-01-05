@@ -1,8 +1,12 @@
 package com.ziletech.app.action;
 
+import com.cong.logiware.hibernate.dao.ProductDAO;
 import com.cong.logiware.hibernate.dao.UserDAO;
+import com.cong.logiware.hibernate.entity.Product;
 import com.cong.logiware.struts.LogiwareDispatchAction;
 import com.ziletech.app.form.LoginForm;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -24,7 +28,15 @@ public class LoginAction extends LogiwareDispatchAction {
             throws Exception {
 
         LoginForm loginForm = (LoginForm) form;
+        ProductDAO productDAO = new ProductDAO();
+        
 
+        List<Product> productList = productDAO.findAll();
+        
+        //System.out.println(productList);
+         request.setAttribute("productList", productList);
+        
+        
         UserDAO userDAO = new UserDAO();
         if (userDAO.isUserFound(loginForm.getUserName(), loginForm.getPassword())) {
             return mapping.findForward(HOME);
