@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @author sunil
  */
 @Entity
-@Table(name = "registration")
+@Table(name = "user")
 public class User implements Domain {
 
     private static final long serialVersionUID = 1L;
@@ -28,7 +28,7 @@ public class User implements Domain {
     @Basic(optional = false)
     @Column(name = "id")
     private Long id;
-    @Column(name = "userName")
+    @Column(name = "username")
     private String userName;
     @Column(name = "password")
     private String password;

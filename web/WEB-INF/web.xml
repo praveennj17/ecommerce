@@ -17,6 +17,22 @@
         </init-param>
         <load-on-startup>2</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.cong.logiware.web.servlet.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/secure.login</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>AuthorizationFilter</filter-name>
+        <filter-class>com.cong.logiware.web.filter.AuthorizationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthorizationFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
     <filter>
         <filter-name>HibernateFilter</filter-name>
         <filter-class>com.cong.logiware.web.filter.HibernateSessionRequestFilter</filter-class>

@@ -33,7 +33,8 @@
 
 
                             <div class="head-signin">
-                                <h5><i class="hd-dign"></i>Hello ${loginForm.userName}</h5>
+                                <h5><i class="hd-dign"></i>Hello ${user.userName}</h5>
+                                <a  href="${path}/secure.login?invalidate=true">Logout</a>
                             </div>              
                             <div class="clearfix"> </div>					
                         </div>

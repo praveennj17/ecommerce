@@ -23,7 +23,8 @@ import org.apache.struts.action.ActionMapping;
 public class HomeAction extends LogiwareDispatchAction{
     
     private static final String HOME = "home";
-    public ActionForward home(ActionMapping mapping, ActionForm form,
+    
+    public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
 
@@ -33,5 +34,4 @@ public class HomeAction extends LogiwareDispatchAction{
         
         return mapping.findForward(HOME);
     }
-    
 }
