@@ -13,13 +13,13 @@
                                         <span class="icon-bar"></span>
                                     </button>
                                     <div class="navbar-brand logo">
-                                        <a href="index.html"><img src="images/logo1.png" alt=""></a>
+                                        <a href="${path}/home.do"><img src="images/logo1.png" alt=""></a>
                                     </div>
                                 </div>
                                 <!--/.navbar-header-->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
-                                        <li><a href="home.do?action=home">Home</a></li>
+                                        <li><a href="home.do">Home</a></li>
                                         <li><a href="product.do?action=showAll">Product</a></li>
                                     </ul>
                                 </div>
