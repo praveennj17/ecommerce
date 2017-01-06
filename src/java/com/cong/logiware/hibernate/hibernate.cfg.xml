@@ -2,8 +2,10 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     
-  <session-factory>
-   <mapping class="com.cong.logiware.hibernate.entity.User"/>
-   <mapping class="com.cong.logiware.hibernate.entity.Address"/>
-  </session-factory>
+    <session-factory>
+        <mapping class="com.cong.logiware.hibernate.entity.User"/>
+        <mapping class="com.cong.logiware.hibernate.entity.Address"/>
+        <mapping class="com.cong.logiware.hibernate.entity.Registration"/>
+        <mapping class="com.cong.logiware.hibernate.entity.Product"/>
+    </session-factory>
 </hibernate-configuration>

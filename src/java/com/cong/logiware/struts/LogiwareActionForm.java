@@ -8,7 +8,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
-import org.apache.catalina.User;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
