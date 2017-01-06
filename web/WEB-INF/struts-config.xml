@@ -9,6 +9,8 @@
     <form-beans>
         <form-bean name="loginForm" type="com.ziletech.app.form.LoginForm"/>
         <form-bean name="registrationForm" type="com.ziletech.app.form.RegistrationForm"/>
+        <form-bean name="productForm" type="com.ziletech.app.form.ProductForm"/>
+        <form-bean name="homeForm" type="com.ziletech.app.form.HomeForm"/>
     </form-beans>
 
     <global-forwards>
@@ -42,6 +44,27 @@
                 type="com.ziletech.app.action.RegistrationAction">
             <forward name="success"  path="/jsp/registration/login.jsp"/>
         </action>
+        
+        <action path="/" forward="/loginPage.do"/>
+        
+        <action input="/jsp/home/product.jsp" 
+                name="productForm" 
+                path="/product" 
+                scope="request" 
+                parameter="action"
+                type="com.ziletech.app.action.ProductAction">
+            <forward name="products"  path="/jsp/product/product.jsp"/>
+            <forward name="product_details"  path="/jsp/product/product_details.jsp"/>
+        </action>
+        
+        <action input="/jsp/home/home.jsp" 
+                name="homeForm" 
+                path="/home" 
+                scope="request" 
+                parameter="action"
+                type="com.ziletech.app.action.HomeAction">
+        </action>
+        
     </action-mappings>
     
     
