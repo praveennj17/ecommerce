@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cong.logiware.hibernate.entity;
 
 import com.cong.logiware.hibernate.Domain;
@@ -30,10 +25,20 @@ public class Product implements Domain {
     private String category;
     @Column(name = "name")
     private String name;
-    @Column(name = "dece")
-    private String dece;
+    @Column(name = "description")
+    private String description;
     @Column(name = "price")
     private int price;
+    @Column(name = "image")
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public Long getId() {
         return id;
@@ -59,12 +64,12 @@ public class Product implements Domain {
         this.name = name;
     }
 
-    public String getDece() {
-        return dece;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDece(String dece) {
-        this.dece = dece;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getPrice() {
@@ -77,7 +82,7 @@ public class Product implements Domain {
 
     @Override
     public String toString() {
-        return "Product{" + "id=" + id + ", category=" + category + ", name=" + name + ", dece=" + dece + ", price=" + price + '}';
+        return "Product{" + "id=" + id + ", category=" + category + ", name=" + name + ", description=" + description + ", price=" + price + ", image=" + image + '}';
     }
 
 }

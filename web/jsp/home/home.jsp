@@ -1,12 +1,8 @@
-<!--Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Shoplist A Ecommerce Category Flat Bootstrap Responsive  Website Template | Home :: w3layouts</title>
+        <title>Shoplist A Ecommerce | Home</title>
         <%@include file="/head.jsp" %>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery-1.11.0.min.js"></script>
@@ -56,8 +52,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <!--/.navbar-header-->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
-                                        <li><a href="index.html">Home</a></li>
-                                    <li><a href="index.html">Product</a></li>
+                                        <li><a href="login.do?action=login">Home</a></li>
+                                        <li><a href="login.do?action=product">Product</a></li>
                                     </ul>
                                 </div>
                                 <!--/.navbar-collapse-->
@@ -67,8 +63,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="header-right">
                         <div class="search">
-                           
-                           
+
+
                             <div class="head-signin">
                                 <h5><i class="hd-dign"></i>Hello ${loginForm.userName}</h5>
                             </div>              
@@ -87,49 +83,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-md-6 banner-left">
                         <a href="single.html"><img src="images/ba.png" alt="" class="img-responsive"></a>
                     </div>
-                    <!--			<div class="col-md-6 banner-right simpleCart_shelfItem">
-                                                    <span class="bann-heart"> </span>
-                                                    <h2>Handbags</h2>
-                                                    <h1>Sed perspiciatis unde</h1>
-                                                    <h5 class="item_price">$200.00</h5>
-                                                    <ul class="bann-small-img">
-                                                            <li><a href="single.html"><img src="images/b1.jpg"></a></li>
-                                                            <li><a href="single.html"><img src="images/b2.jpg"></a></li>
-                                                    </ul>
-                                                    <h6>Size Charts</h6>
-                                                    <ul class="bann-btns">
-                                                    <li><select class="bann-size">
-                                                            <option value="select your location">Size</option>
-                                                            <option value="saab">Small</option>
-                                                            <option value="fiat">Medium</option>
-                                                            <option value="audi">Large</option>
-                                                    </select>
-                                                    </li>
-                                                    <li><a href="#" class="item_add">Add To Cart</a></li>
-                                   </ul>
-                                            </div>-->
+
                     <div class="clearfix"> </div>
                 </div>
             </div>
         </div>
-        <!--banner end here-->
-        <!--block-layer2 start here-->
 
-        <!--block-layer2 end here-->
-        <!--block-layer1 start here-->
-
-        <!--block-layer1 end here-->
-        <!--home-block start here-->
         <div class="home-block">
             <div class="container">
                 <div class="home-block-main">
 
-                    <c:forEach var="item" items="${productList}">
+                    <c:forEach var="item" items="${productList}" begin="1" end="4">
 
                         <div class="col-md-3 home-grid">
                             <div class="home-product-main">
                                 <div class="home-product-top">
-                                    <a href="product.html"><img src="images/h1.jpg" alt="" class="img-responsive zoom-img"></a>
+                                    <a href="product.html"><img src="${item.image}" alt="" class="img-responsive zoom-img"></a>
                                 </div>
                                 <div class="home-product-bottom">
                                     <h3><a href="single.html">${item.name}</a></h3>
@@ -141,6 +110,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
                             </div>
                         </div>
+
                     </c:forEach>
 
                     <div class="clearfix"> </div>

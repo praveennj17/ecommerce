@@ -30,12 +30,11 @@ public class RegistrationAction extends LogiwareDispatchAction {
         RegistrationDAO registrationDAO = new RegistrationDAO();
         Registration registration = new Registration();
 
-      
         registration.setUserName(registrationForm.getUserName());
         registration.setEmail(registrationForm.getEmail());
         registration.setPassword(registrationForm.getPassword());
         registrationDAO.saveOrUpdate(registration);
         return mapping.findForward(SUCCESS);
-    
+
     }
 }

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Shoplist A Ecommerce </title>
+        <title>Shoplist A Ecommerce: Product</title>
         <%@include file="/head.jsp" %>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery-1.11.0.min.js"></script>
@@ -27,6 +27,15 @@
             });
         </script>
         <!-- //end-smoth-scrolling -->
+        <!-- the jScrollPane script -->
+        <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" id="sourcecode">
+            $(function ()
+            {
+                $('.scroll-pane').jScrollPane();
+            });
+        </script>
+        <!-- //the jScrollPane script -->
         <script src="js/simpleCart.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </head>
@@ -52,8 +61,8 @@
                                 <!--/.navbar-header-->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
-                                        <li><a href="loginPage.do">Home</a></li>
-                                        <li><a href="loginPage.do">Product</a></li>
+                                        <li><a href="login.do?action=login">Home</a></li>
+                                        <li><a href="login.do?action=product">Product</a></li>
                                     </ul>
                                 </div>
                                 <!--/.navbar-collapse-->
@@ -66,7 +75,7 @@
 
 
                             <div class="head-signin">
-                                <h5><a href="loginPage.do"><i class="hd-dign"></i>Sign in</a></h5>
+                                <h5><i class="hd-dign"></i>Hello ${loginForm.userName}</h5>
                             </div>              
                             <div class="clearfix"> </div>					
                         </div>
@@ -76,39 +85,41 @@
             </div>
         </div>
         <!--header end here-->
-        <!--log in start here-->
-        <div class="login">
+        <!--product start here-->
+        <div class="product">
             <div class="container">
-                <div class="login-main">
-                    <h1>Login</h1>
-                    <div class="col-md-6 login-left">
-                        <h2>Existing User</h2>
-                        <cong:form action="login.do?action=login" method="post" name="loginForm">
+                <div class="product-main">
+                    <div class=" product-menu-bar">
+
+                    </div>	
+                    <div class="col-md-12 product-block">
+
+                        <c:forEach var="item" items="${productList}">
+
+                            <div class="col-md-4 home-grid">
+                                <div class="home-product-main">
+                                    <div class="home-product-top">
+                                        <a href="single.html"><img src="${item.image}" alt="" class="img-responsive zoom-img"></a>
+                                    </div>
+                                    <div class="home-product-bottom">
+                                        <h3><a href="single.html">${item.name}</a></h3>
+                                        <p>Explore Now</p>						
+                                    </div>
+                                    <div class="srch">
+                                        <span>${item.price}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </c:forEach>
 
 
-                            <label>User Name</label>
-                            <cong:text  name="userName"/>
-                            <label>Password</label>
-                            <cong:password  name="password"/>
-                            <c:if test="${not empty loginForm.errorMessage}">
-                                <div class="error">${loginForm.errorMessage}</div>
-                            </c:if>
-                            <input type="submit" onclick="myFunction()" value="Login" >
-
-                        </cong:form>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="col-md-6 login-right">
-                        <h3>New User? Create an Account</h3>
-                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system. and expound the actual teachings of the great.</p>
-
-                        <a href="RegistrationPage.do">Create an Account </a>
-
-                    </div>
-                    <div class="clearfix"> </div>
                 </div>
             </div>
         </div>
-        <!--log in end here-->
+        <!--product end here-->
         <!--footer strat here-->
         <div class="footer">
             <div class="container">

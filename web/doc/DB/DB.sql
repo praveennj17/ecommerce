@@ -16,6 +16,24 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`ziletech` /*!40100 DEFAULT CHARACTER SE
 
 USE `ziletech`;
 
+/*Table structure for table `product` */
+
+DROP TABLE IF EXISTS `product`;
+
+CREATE TABLE `product` (
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `category` varchar(20) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `price` int(9) DEFAULT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  `image` varchar(200) DEFAULT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+/*Data for the table `product` */
+
+insert  into `product`(`id`,`category`,`name`,`price`,`description`,`image`) values (1,'Women','Dress',5000,'nice dress','images/h36.jpg'),(2,'women','Beg',3000,'nice beg','images/h1.jpg'),(3,'Women','Watch',6000,'wow nice','images/h16.jpg'),(4,'Women','Briclate',2000,'Amazing ','images/h8.jpg'),(5,'Women','purce',5000,'oh greate','images/h11.jpg'),(6,'women','watch',5000,'nicee','images/h19.jpg'),(7,'women','sandle',6000,'awsam','images/h24.jpg'),(8,'women','chain',4000,'nice one','images/h18.jpg'),(9,'women','frock',5555,'black','images/h31.jpg');
+
 /*Table structure for table `registration` */
 
 DROP TABLE IF EXISTS `registration`;
@@ -26,11 +44,11 @@ CREATE TABLE `registration` (
   `username` varchar(15) DEFAULT NULL,
   `password` varchar(16) DEFAULT NULL,
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `registration` */
 
-insert  into `registration`(`id`,`email`,`username`,`password`) values (1,'askjbf','nag','skjfn');
+insert  into `registration`(`id`,`email`,`username`,`password`) values (1,'askjbf','nag','skjfn'),(2,'nagendra@gmail.com','nagendra','nagendra');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
