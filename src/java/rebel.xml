@@ -8,7 +8,7 @@
 
 	<web>
 		<link target="/">
-			<dir name="/Users/sks/WORKSPACE/Project/ecommerce/build/web">
+			<dir name="/Users/sks/WORKSPACE/Project/ecommerce/web">
 			</dir>
 		</link>
 	</web>
