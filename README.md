@@ -11,8 +11,12 @@
    git checkout -b <branchname>
    ```
 4. Open Netbeans
-5. Create New Project with option existing source.
-6. Run the query from DB.sql and Query.sql
+5. Create New Project 
+```
+6. File -> New Project -> Java Web -> Web Application with existing source -> Next
+7. Select the location of the project and click next and finish
+```
+8. Run the query from DB.sql and Query.sql
 
 
 ---
