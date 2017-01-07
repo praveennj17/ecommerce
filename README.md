@@ -65,6 +65,7 @@ The key's randomart image is:
 |                 |
 +-----------------+
 ```
+Upload your public key to **https://github.com/settings/keys**
 
 #Troubleshooting 
 
