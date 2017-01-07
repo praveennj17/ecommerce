@@ -2,7 +2,7 @@
 
 1. Create folder ecommerce
 2. Open folder in cmd or gitshell
-3. Run the followiing command
+3. Run the following command from the project folder
 ```
    git init
    git remote add origin git@github.com:sks40gb/ecommerce.git
