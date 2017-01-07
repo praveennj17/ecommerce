@@ -13,11 +13,11 @@
 4. Open Netbeans
 5. Create New Project 
 6. File -> New Project 
-7. Select Categories - Java Web
-8. Select Projects - Web Application with existing source
-9. Click Next
+7. Select Categories - **Java Web**
+8. Select Projects - **Web Application with existing source**
+9. Click **Next**
 10. Select the location of the project and click next and finish
-11. Run the query from DB.sql and Query.sql located at folder */web/doc/DB*
+11. Run the query from **DB.sql** and **Query.sql** located at folder */web/doc/DB*
 
 
 ---
