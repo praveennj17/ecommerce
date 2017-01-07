@@ -10,3 +10,4 @@
    git checkout -b <branchname>
 4. Open Netbeans
 5. Create New Project with option existing source.
+6. Run the query from DB.sql and Query.sql
