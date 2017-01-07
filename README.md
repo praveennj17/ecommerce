@@ -1,13 +1,15 @@
 # ecommerce
 
-1. create folder ecommerce
-2. open folder in cmd or gitshell
-3. run the followiing command
+1. Create folder ecommerce
+2. Ppen folder in cmd or gitshell
+3. Run the followiing command
+```
    git init
    git remote add origin git@github.com:sks40gb/ecommerce.git
    git fetch
    git checkout develop
    git checkout -b <branchname>
+   ```
 4. Open Netbeans
 5. Create New Project with option existing source.
 6. Run the query from DB.sql and Query.sql
