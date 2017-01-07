@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="clearfix"> </div>
-                </div> hello hello how
+                </div> 
             </div>
         </div>
         <!--header end here-->

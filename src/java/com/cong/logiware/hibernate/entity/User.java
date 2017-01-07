@@ -35,7 +35,7 @@ public class User implements Domain {
     @Column(name = "email")
     private String email;
    
-//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    @ManyToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 //    private List<Address> addressList = new ArrayList<>();
 
     public User() {

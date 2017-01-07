@@ -4,9 +4,24 @@
     <%@include file="/head.jsp" %>
     <body>
         <%@include file="/jsp/header.jsp" %>
+
         <!--product start here-->
 
+        <!--flex slider-->
+        <script defer src="js/jquery.flexslider.js"></script>
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 
+        <script>
+            // Can also be used with $(document).ready()
+            $(window).load(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    controlNav: "thumbnails"
+                });
+            });
+        </script>
+        <script src="js/imagezoom.js"></script>
+        <!--flex slider-->
         <!--single start here-->
         <div class="single">
             <div class="container">
@@ -32,9 +47,9 @@
 
                             <h6 class="item_price">Rs. ${productForm.product.price}</h6>	
                             <p>${productForm.product.description}</p>
-                            
+
                             <ul class="bann-btns">
-                               
+
                                 <li><a href="#" class="item_add">Add To Cart</a></li>					
                             </ul>
                         </div>
