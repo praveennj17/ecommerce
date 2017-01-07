@@ -72,5 +72,8 @@ The key's randomart image is:
 ```
 ssh: Could not resolve hostname github.com: Name or service not known
 ```
-git remote set-url origin git@github.com:sks40gb/ecommerce.git
 Run the following command to resolve this issue
+```
+git remote set-url origin git@github.com:sks40gb/ecommerce.git
+```
+
