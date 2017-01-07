@@ -14,10 +14,18 @@ public class UserDAO extends BaseHibernateDAO<User> {
     
     public boolean isUserFound(String userName, String password){
         List<Property> properties = new ArrayList<>();
-        properties.add(Property.getInstance("loginName", userName));
+        properties.add(Property.getInstance("userName", userName));
         properties.add(Property.getInstance("password", password));
         List<User> list = findByProperties(properties);
         return (list.size() > 0);
+    }
+    
+      public User getUser(String userName, String password){
+        List<Property> properties = new ArrayList<>();
+        properties.add(Property.getInstance("userName", userName));
+        properties.add(Property.getInstance("password", password));
+        List<User> list = findByProperties(properties);
+        return (list.size() > 0) ? list.get(0) : null;
     }
 
 }

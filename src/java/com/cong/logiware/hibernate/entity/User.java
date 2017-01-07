@@ -28,23 +28,26 @@ public class User implements Domain {
     @Basic(optional = false)
     @Column(name = "id")
     private Long id;
-    @Column(name = "login_name")
-    private String loginName;
+    @Column(name = "username")
+    private String userName;
     @Column(name = "password")
     private String password;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name")
-    private String lastName;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Address> addressList = new ArrayList<>();
+    @Column(name = "email")
+    private String email;
+   
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<Address> addressList = new ArrayList<>();
 
     public User() {
     }
 
-    public User(Long id) {
-        this.id = id;
-    }
+//    public List<Address> getAddressList() {
+//        return addressList;
+//    }
+//
+//    public void setAddressList(List<Address> addressList) {
+//        this.addressList = addressList;
+//    }
 
     public Long getId() {
         return id;
@@ -54,12 +57,12 @@ public class User implements Domain {
         this.id = id;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -70,34 +73,19 @@ public class User implements Domain {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getEmail() {
+        return email;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public List<Address> getAddressList() {
-        return addressList;
-    }
-
-    public void setAddressList(List<Address> addressList) {
-        this.addressList = addressList;
-    }
-
-    
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", loginName=" + loginName + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + '}';
+        return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email + '}';
     }
+
+   
    
 }

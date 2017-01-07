@@ -1,12 +1,12 @@
 package com.ziletech.app.form;
 
-import org.apache.struts.action.ActionForm;
+import com.cong.logiware.struts.LogiwareActionForm;
 
 /**
  *
  * @author admin
  */
-public class LoginForm extends ActionForm {
+public class LoginForm extends LogiwareActionForm {
 
     private String userName;
     private String password;

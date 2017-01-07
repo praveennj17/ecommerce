@@ -1,2 +1,8 @@
 .class
-/dist
+dist/
+nbproject/
+build/
+/nbproject/
+/nbproject
+build.xml
+.rebel.xml.bak
