@@ -28,6 +28,7 @@ public class Login extends HttpServlet {
             User user = new UserDAO().getUser(userName, password);
             if(user != null){
                 request.getSession().setAttribute(SessionConstant.USER, user);
+                request.getSession().setAttribute("isLoggedIn",true);
                 response.sendRedirect("home.do");
             }else{
                 rd.forward(request, response);

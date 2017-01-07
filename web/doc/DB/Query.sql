@@ -9,3 +9,6 @@ CREATE TABLE `user` (
   `password` varchar(16) DEFAULT NULL,
   UNIQUE KEY `id` (`id`)
 );
+
+--7/12/17 @Sunil
+insert  into user (email, username, password )  values ("admin@ziletech.com", "admin", "admin");

@@ -33,24 +33,3 @@ CREATE TABLE `product` (
 /*Data for the table `product` */
 
 insert  into `product`(`id`,`category`,`name`,`price`,`description`,`image`) values (1,'Women','Dress',5000,'nice dress','images/h36.jpg'),(2,'women','Beg',3000,'nice beg','images/h1.jpg'),(3,'Women','Watch',6000,'wow nice','images/h16.jpg'),(4,'Women','Briclate',2000,'Amazing ','images/h8.jpg'),(5,'Women','purce',5000,'oh greate','images/h11.jpg'),(6,'women','watch',5000,'nicee','images/h19.jpg'),(7,'women','sandle',6000,'awsam','images/h24.jpg'),(8,'women','chain',4000,'nice one','images/h18.jpg'),(9,'women','frock',5555,'black','images/h31.jpg');
-
-/*Table structure for table `registration` */
-
-DROP TABLE IF EXISTS `registration`;
-
-CREATE TABLE `registration` (
-  `id` int(30) NOT NULL AUTO_INCREMENT,
-  `email` varchar(50) DEFAULT NULL,
-  `username` varchar(15) DEFAULT NULL,
-  `password` varchar(16) DEFAULT NULL,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
-/*Data for the table `registration` */
-
-insert  into `registration`(`id`,`email`,`username`,`password`) values (1,'askjbf','nag','skjfn'),(2,'nagendra@gmail.com','nagendra','nagendra');
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

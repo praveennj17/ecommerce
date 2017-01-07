@@ -27,6 +27,9 @@ public class RegistrationAction extends LogiwareDispatchAction {
 
         RegistrationForm registrationForm = (RegistrationForm) form;
 
+        //Delete Registration entity and Registration DAO instead use User entity
+        //Delete the table from DB
+        //Remove the entity entry from hibernate.cfg.xml
         RegistrationDAO registrationDAO = new RegistrationDAO();
         Registration registration = new Registration();
 

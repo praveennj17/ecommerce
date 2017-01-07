@@ -21,6 +21,7 @@
                                     <ul class="nav navbar-nav">
                                         <li><a href="home.do">Home</a></li>
                                         <li><a href="product.do?action=showAll">Product</a></li>
+                                         <li><a href="product.do?action=showAll">Manage Products</a></li>
                                     </ul>
                                 </div>
                                 <!--/.navbar-collapse-->
@@ -33,14 +34,16 @@
 
 
                             <div class="head-signin">
-                                <h5><i class="hd-dign"></i>Hello ${user.userName}</h5>
-                                <a  href="${path}/secure.login?invalidate=true">Logout</a>
+                                <h5><i class="hd-dign"></i>Hello ${user.userName} - ${user.email}</h5>
+                                <c:if test="${isLoggedIn}">
+                                    <a  href="${path}/secure.login?invalidate=true">Logout</a>
+                                </c:if>
                             </div>              
                             <div class="clearfix"> </div>					
                         </div>
                     </div>
                     <div class="clearfix"> </div>
-                </div>
+                </div> hello hello how
             </div>
         </div>
         <!--header end here-->
