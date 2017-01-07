@@ -1,7 +1,7 @@
 # ecommerce
 
 1. Create folder ecommerce
-2. Ppen folder in cmd or gitshell
+2. Open folder in cmd or gitshell
 3. Run the followiing command
 ```
    git init
@@ -16,7 +16,7 @@
 
 
 ---
-**Generate a new SSH key**
+#Generate a new SSH key
 
 If you don't have an existing SSH key that you wish to use, generate one as follows:
 Log in to your local computer as an administrator.
