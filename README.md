@@ -2,7 +2,7 @@
 
 1. Create folder ecommerce
 2. Open folder in cmd or gitshell
-3. Run the following command from the project folder
+3. Run the following command from the ecommerce folder
 ```
    git init
    git remote add origin git@github.com:sks40gb/ecommerce.git
@@ -16,7 +16,7 @@
 7. Select Categories - **Java Web**
 8. Select Projects - **Web Application with existing source**
 9. Click **Next**
-10. Select the location of the project and click next and finish
+10. Select the location of the project and click **next** and **finish**
 11. Run the query from **DB.sql** and **Query.sql** located at folder */web/doc/DB*
 
 
