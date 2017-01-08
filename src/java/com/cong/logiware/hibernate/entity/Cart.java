@@ -29,10 +29,10 @@ public class Cart implements Domain {
 
     @JoinColumn(name = "useridfk")
     @ManyToOne
-    private Long userId;
+    private User user;
     @JoinColumn(name = "productidfk")
     @ManyToOne
-    private Long ProductId;
+    private Product product;
 
     @Column(name = "quantity")
     private Long quantity;
@@ -53,25 +53,21 @@ public class Cart implements Domain {
         this.id = id;
     }
 
-    public Long getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public Long getProductId() {
-        return ProductId;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProductId(Long ProductId) {
-        this.ProductId = ProductId;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
-    @Override
-    public String toString() {
-        return "Cart{" + "id=" + id + ", userId=" + userId + ", ProductId=" + ProductId + ", quantity=" + quantity + '}';
-    }
-
+   
 }
