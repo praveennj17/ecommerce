@@ -35,7 +35,13 @@ CREATE TABLE `cart_product` (
 ALTER TABLE `user`
 ADD COLUMN `cart_id` INT NULL AFTER `password`;
 
-ALTER TABLE cart
-DROP COLUMN `productidfk`,
-DROP COLUMN `useridfk`,
-CHANGE COLUMN `quantity` `name` INT(11) NULL DEFAULT NULL ;
+
+
+
+
+
+
+
+
+
+

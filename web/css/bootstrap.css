@@ -5859,6 +5859,10 @@ button.close {
   padding: 5px 0;
   margin-top: -3px;
 }
+.rgh{
+    float:right;
+    
+}
 .tooltip.right {
   padding: 0 5px;
   margin-left: 3px;

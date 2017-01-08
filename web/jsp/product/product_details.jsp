@@ -47,10 +47,16 @@
 
                             <h6 class="item_price">Rs. ${productForm.product.price}</h6>	
                             <p>${productForm.product.description}</p>
+                            <h6>Quantity</h6>
 
+                            <cong:select  value="quant" name="quantity">
+                                <cong:option value="quant">1</cong:option>
+
+                            </cong:select>
+                            <br>    <br>
                             <ul class="bann-btns">
 
-                                <li><a href="#" class="item_add">Add To Cart</a></li>					
+                                <li><a href="" class="item_add">Add To Cart</a></li>					
                             </ul>
                         </div>
                         <div class="clearfix"> </div>

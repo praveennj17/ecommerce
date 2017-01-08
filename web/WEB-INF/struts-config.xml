@@ -33,7 +33,7 @@
         <action path="/loginPage" forward="/jsp/login.jsp"/>
 
         <action path="/RegistrationPage" forward="/jsp/registration/signup.jsp"/>
- 
+ <action path="/cart" forward="/jsp/cart/cart.jsp"/>
         
         <action input="/jsp/registration/signup.jsp" 
                 name="registrationForm" 
@@ -45,6 +45,7 @@
         </action>
         
         <action path="/" forward="/loginPage.do"/>
+          
         
         <action input="/jsp/home/product.jsp" 
                 name="productForm" 
@@ -54,6 +55,7 @@
                 type="com.ziletech.app.action.ProductAction">
             <forward name="products"  path="/jsp/product/product.jsp"/>
             <forward name="product_details"  path="/jsp/product/product_details.jsp"/>
+           
         </action>
         
         <action input="/jsp/home/home.jsp" 
