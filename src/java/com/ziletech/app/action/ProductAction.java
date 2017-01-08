@@ -42,13 +42,6 @@ public class ProductAction extends LogiwareDispatchAction{
         return mapping.findForward(PRODUCT_DETAILS);
     }
     
-  public ActionForward addToCart(ActionMapping mapping, ActionForm form,
-            HttpServletRequest request, HttpServletResponse response)
-            throws Exception {
 
-      
-         
-        return mapping.findForward(PRODUCT_DETAILS);
-    }
     
 }
