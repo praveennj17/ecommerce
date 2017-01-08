@@ -1,6 +1,8 @@
 package com.cong.logiware.hibernate.entity;
 
 import com.cong.logiware.hibernate.Domain;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -27,22 +28,18 @@ public class Cart implements Domain {
     @Column(name = "id")
     private Long id;
 
-    @JoinColumn(name = "useridfk")
-    @ManyToOne
-    private User user;
-    @JoinColumn(name = "productidfk")
-    @ManyToOne
-    private Product product;
+    @Column(name = "name")
+    private String name;
+    
+    @OneToMany(mappedBy = "cart")
+    private List<CartProduct> cartProductList;
 
-    @Column(name = "quantity")
-    private Long quantity;
-
-    public Long getQuantity() {
-        return quantity;
+    public String getName() {
+        return name;
     }
 
-    public void setQuantity(Long quantity) {
-        this.quantity = quantity;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Long getId() {
@@ -53,21 +50,15 @@ public class Cart implements Domain {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public List<CartProduct> getCartProductList() {
+        if(cartProductList == null){
+            cartProductList = new ArrayList<>();
+        }
+        return cartProductList;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setCartProductList(List<CartProduct> cartProductList) {
+        this.cartProductList = cartProductList;
     }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
    
 }
