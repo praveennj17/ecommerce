@@ -21,19 +21,19 @@
             <div class="container">
                 <div class="home-block-main">
 
-                    <c:forEach var="item" items="${homeForm.productList}" begin="1" end="4">
+                    <c:forEach var="product" items="${homeForm.productList}" begin="1" end="4">
 
                         <div class="col-md-3 home-grid">
                             <div class="home-product-main">
                                 <div class="home-product-top">
-                                    <a href="product.html"><img src="${item.image}" alt="" class="img-responsive zoom-img"></a>
+                                    <a href="product.do?action=displayProduct&productId=${product.id}"><img src="${product.image}" alt="" class="img-responsive zoom-img"></a>
                                 </div>
                                 <div class="home-product-bottom">
-                                    <h3><a href="single.html">${item.name}</a></h3>
+                                    <h3><a href="product.do?action=displayProduct&productId=${product.id}">${product.name}</a></h3>
 
                                 </div>
                                 <div class="srch">
-                                    <span>${item.price}</span>
+                                    <span>${product.price}</span>
 
                                 </div>
                             </div>

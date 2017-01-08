@@ -1,15 +1,9 @@
 package com.ziletech.app.action;
 
-import com.cong.logiware.struts.LogiwareDispatchAction;
-import com.cong.logiware.hibernate.dao.ProductDAO;
-import com.cong.logiware.hibernate.dao.UserDAO;
 import com.cong.logiware.hibernate.entity.Product;
 import com.cong.logiware.struts.LogiwareDispatchAction;
-import com.ziletech.app.form.LoginForm;
 import com.ziletech.app.form.ProductForm;
 import com.ziletech.app.service.ProductService;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -47,5 +41,7 @@ public class ProductAction extends LogiwareDispatchAction{
 
         return mapping.findForward(PRODUCT_DETAILS);
     }
+    
+
     
 }

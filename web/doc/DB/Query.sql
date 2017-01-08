@@ -12,3 +12,36 @@ CREATE TABLE `user` (
 
 --7/12/17 @Sunil
 insert  into user (email, username, password )  values ("admin@ziletech.com", "admin", "admin");
+
+--8/12/17 @Nagendra
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `useridfk` int(11) DEFAULT NULL,
+  `productidfk` int(11) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+--8/12/17 @Sunil
+
+CREATE TABLE `cart_product` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cart_id` INT NULL,
+  `product_id` INT NULL,
+  `quantity` INT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+
+ALTER TABLE `user`
+ADD COLUMN `cart_id` INT NULL AFTER `password`;
+
+
+
+
+
+
+
+
+
+
+
