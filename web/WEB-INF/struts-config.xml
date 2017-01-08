@@ -33,7 +33,8 @@
         <action path="/loginPage" forward="/jsp/login.jsp"/>
 
         <action path="/RegistrationPage" forward="/jsp/registration/signup.jsp"/>
- 
+      <action path="/adminhome" forward="/jsp/admin/adminhome.jsp"/>
+         <action path="/addproduct" forward="/jsp/admin/addproduct.jsp"/>
         
         <action input="/jsp/registration/signup.jsp" 
                 name="registrationForm" 
@@ -43,8 +44,17 @@
                 type="com.ziletech.app.action.RegistrationAction">
             <forward name="success"  path="/jsp/login.jsp"/>
         </action>
-        
+            <action input="/jsp/registration/signup.jsp" 
+                name="ProductForm" 
+                path="/addproduct" 
+                scope="session" 
+                parameter="action"
+                type="com.ziletech.app.action.ProductAction">
+            <forward name="success"  path="/jsp/login.jsp"/>
+        </action>
         <action path="/" forward="/loginPage.do"/>
+        
+        
         
         <action input="/jsp/home/product.jsp" 
                 name="productForm" 
@@ -55,7 +65,8 @@
             <forward name="products"  path="/jsp/product/product.jsp"/>
             <forward name="product_details"  path="/jsp/product/product_details.jsp"/>
         </action>
-        
+         <forward name="adminhome"  path="/jsp/admin/adminhome.jsp"/>
+         
         <action input="/jsp/home/home.jsp" 
                 name="homeForm" 
                 path="/home" 

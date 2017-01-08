@@ -24,7 +24,7 @@ public class ProductAction extends LogiwareDispatchAction{
     
     private static final String PRODUCTS = "products";
     private static final String PRODUCT_DETAILS = "product_details";
-    
+     private static final String PRODUCT_ADD = "product_add";
     public ActionForward showAll(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
@@ -46,6 +46,16 @@ public class ProductAction extends LogiwareDispatchAction{
         productForm.setProduct(product);
 
         return mapping.findForward(PRODUCT_DETAILS);
+    }
+       public ActionForward AddProduct(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+
+        ProductForm productForm = (ProductForm) form;
+        Product product = new ProductService().getById(productForm.getProductId());
+        productForm.setProduct(product);
+
+        return mapping.findForward(PRODUCT_ADD);
     }
     
 }

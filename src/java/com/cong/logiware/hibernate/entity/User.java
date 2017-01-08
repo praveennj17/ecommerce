@@ -34,6 +34,16 @@ public class User implements Domain {
     private String password;
     @Column(name = "email")
     private String email;
+     @Column(name = "role")
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
    
 //    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 //    private List<Address> addressList = new ArrayList<>();
@@ -83,8 +93,11 @@ public class User implements Domain {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email + '}';
+        return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email + ", role=" + role + '}';
     }
+
+   
+    
 
    
    
