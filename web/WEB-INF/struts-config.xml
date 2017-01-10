@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="loginForm" type="com.ziletech.app.form.LoginForm"/>
+        <form-bean name="registrationForm" type="com.ziletech.app.form.RegistrationForm"/>
+        <form-bean name="productForm" type="com.ziletech.app.form.ProductForm"/>
+        <form-bean name="homeForm" type="com.ziletech.app.form.HomeForm"/>
+    </form-beans>
+
+    <global-forwards>
+        <forward name="home" path="/jsp/home/home.jsp"/>
+        <!--            <forward name="RegistrationPage" path="/jsp/signup.jsp"/>-->
+    </global-forwards>
+
+    <action-mappings>
+        <action input="/jsp/login.jsp" 
+                name="loginForm" 
+                path="/login" 
+                scope="session" 
+                parameter="action"
+                type="com.ziletech.app.action.LoginAction">
+           
+            <forward name="failure"  path="/jsp/login.jsp"/>
+            <forward name="products"  path="/jsp/home/product.jsp"/>
+        </action>
+       
+        <action path="/loginPage" forward="/jsp/login.jsp"/>
+
+        <action path="/RegistrationPage" forward="/jsp/registration/signup.jsp"/>
+ 
+        
+        <action input="/jsp/registration/signup.jsp" 
+                name="registrationForm" 
+                path="/registration" 
+                scope="session" 
+                parameter="action"
+                type="com.ziletech.app.action.RegistrationAction">
+            <forward name="success"  path="/jsp/login.jsp"/>
+        </action>
+        
+        <action path="/" forward="/loginPage.do"/>
+        
+        <action input="/jsp/home/product.jsp" 
+                name="productForm" 
+                path="/product" 
+                scope="request" 
+                parameter="action"
+                type="com.ziletech.app.action.ProductAction">
+            <forward name="products"  path="/jsp/product/product.jsp"/>
+            <forward name="product_details"  path="/jsp/product/product_details.jsp"/>
+        </action>
+        
+        <action input="/jsp/home/home.jsp" 
+                name="homeForm" 
+                path="/home" 
+                scope="request" 
+                parameter="action"
+                type="com.ziletech.app.action.HomeAction">
+        </action>
+        
+    </action-mappings>
+      
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>
