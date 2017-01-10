@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
 h4, h5, h6,
 h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0;}
@@ -1339,6 +1340,8 @@ a.add-cart {
     font-size: 0.9em;
     margin-top: 1.3em;
     display: inline-block;
+   
+    
 }
 a.add-cart:hover {
 	background:#EA572D;
@@ -1492,7 +1495,7 @@ ul.cart-header li span h6,ul.cart-header1 li span h6,ul.cart-header2 li span h6{
 }
 /*--cheek box--*/
 .remember-top{
- float:left;
+    float:left;
 }
 span.checkbox1 {
     margin-top: 2px;
@@ -2252,6 +2255,7 @@ h3.typo1 {
 }
 a.add-cart {
     font-size: 0.7em;
+     float: right;
 }
 ul.cart-header li span, ul.cart-header1 li span, ul.cart-header2 li span {
     font-size: 0.8em;
@@ -2266,6 +2270,7 @@ ul.unit li span {
 a.add-cart {
     font-size: 0.7em;
     margin-top: 1em;
+     float: right;
 }
 .cart-items {
     padding: 0 0em;
@@ -2589,6 +2594,7 @@ select.bann-size {
 }
 a.add-cart {
     font-size: 0.55em;
+     float: right;
 }
 ul.cart-header li, ul.cart-header1 li, ul.cart-header2 li {
     display: inline-block;

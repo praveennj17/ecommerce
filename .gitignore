@@ -6,3 +6,4 @@ build/
 /nbproject
 build.xml
 .rebel.xml.bak
+src/java/rebel.xml

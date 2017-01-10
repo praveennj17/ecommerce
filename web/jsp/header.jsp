@@ -22,11 +22,12 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="home.do">Home</a></li>
                                 <li><a href="product.do?action=showAll">Product</a></li>
-                                    <c:if test="${user.role eq 'admin'}">
-                                    <li><a href="adminhome.do">Manage Products</a></li>
-                                    </c:if>
-                            </ul>
 
+                                <c:if test="${user.role eq 'admin'}">
+                                    <li><a href="adminhome.do">Manage Products</a></li>
+                                </c:if>
+
+                            </ul>
                         </div>
                         <!--/.navbar-collapse-->
                     </nav>
@@ -35,6 +36,17 @@
             </div>
             <div class="header-right">
                 <div class="search">
+
+                    <div class="cart box_1">
+                        <a href="cart.do">
+                            <h3>
+                                <img src="images/cart.png" alt=""/>
+
+                            </h3>
+                        </a>
+                        <p><a href="" class="simpleCart_empty">Empty Cart</a></p>
+                    </div> 
+
 
 
                     <div class="head-signin">
