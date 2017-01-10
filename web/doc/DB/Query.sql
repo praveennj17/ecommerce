@@ -35,8 +35,8 @@ CREATE TABLE `cart_product` (
 ALTER TABLE `user`
 ADD COLUMN `cart_id` INT NULL AFTER `password`;
 
-
-
+--10/01/17 @yulti
+ALTER TABLE `cart` DROP COLUMN `useridfk`, DROP COLUMN `productidfk`,    CHANGE `quantity` `name` VARCHAR(255) NULL ;
 
 
 
