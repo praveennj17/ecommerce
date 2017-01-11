@@ -1,38 +1,86 @@
-
 <!DOCTYPE HTML>
 <html>
     <%@include file="/head.jsp" %>
     <body>
         <%@include file="/jsp/header.jsp" %>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--start-ckeckout-->
+        <div class="ckeckout">
+            <div class="container">
+                <div class="ckeckout-top">
+                    <div class=" cart-items heading">
+
+                        <h1>Product Update</h1>
+                        <div class="in-check" >
+                            <ul class="unit">
+                                <li><span>Item</span></li>
+                                <li><span>Category</span></li>
+                                <li><span>Product Name</span></li>
+                                <li><span>Description</span></li>
+                                <li><span>Unit Price</span></li>
+                                <li><span>Quantity</span></li>
+                                <div class="clearfix"> </div>
+                            </ul>
+
+                            <ul class="cart-header simpleCart_shelfItem">
+                                <cong:form action="addProduct.do?action=addProduct" method="post" name="adminproductForm">
+                                    <li class="ring-in"><a href="#" ><img src="images/c.jpg" class="img-responsive" alt=""></a>
+                                    </li>
+                                    <li><span><cong:text name="category"/></span></li>
+                                    <li><span><cong:text name="name"/></span></li>
+
+                                    <li><span><cong:text name="description"/></span></li>
+                                    <li><span><cong:text name="price"/></span></li>
 
 
-        <div class="container">
-            <div class="col-md-4 product-block">
+                                    <li> <input type="submit" value="Submit">                                            
+                                    </cong:form>
+                                <div class="clearfix"> </div>
+                            </ul>
 
-            </div>
-            <div class="col-md-4 product-block">
-                <br>
-                <br>
-                <br>
-                <br>
+                        </div>
+                    </div>  
+                </div>
+                <div class="ckeckout-top">
+                    <div class=" cart-items heading">
+                        <h1>List Products</h1>
 
-                <h4><a href="">PRODUCT LIST</a></h4>
-                <br>
-                <h4><a href="addproduct.do">ADD PRODUCT</a></h4>
-                <br>                      
-                <h4><a href="">ORDER DETAILS</a></h4>
-                <br>
-                <h4><a href="">DELETE PRODUCT</a></h4>
-                <br>
-                <br>
-                <br>
 
-            </div>
-            <div class="col-md-4 product-block">
+                        <div class="in-check" >
+                            <ul class="unit">
+                                <li><span>Item</span></li>
+                                <li><span>Category</span></li>
+
+                                <li><span>Product Name</span></li>
+                                <li><span>Description</span></li>
+                                <li><span>Unit Price</span></li>
+                                <li><span>Quantity</span></li>
+                                <div class="clearfix"> </div>
+                            </ul>
+                            <c:forEach var="product" items="${productForm.productList}">
+                                <ul class="cart-header simpleCart_shelfItem">
+
+                                    <li class="ring-in"><a href="#" ><img src="${product.image}" class="img-responsive" alt=""></a>
+                                    </li>
+                                    <li><span>${product.category}</span></li>
+                                    <li><span>${product.name}</span></li>
+                                    <li><span>${product.description}</span></li>
+                                    <li><span class="item_price">${product.price}</span></li>
+                                    <li><span class="item_price">1</span></li>
+                                    <li> <a href="#" class="add-cart cart-check">Remove</a>
+                                        <a href="#" class="add-cart cart-check">Edit</a>
+                                    </li>
+
+                                    <div class="clearfix"> </div>
+                                </ul>
+                            </c:forEach>
+
+                        </div>
+                    </div>  
+                </div>
             </div>
         </div>
+        <!--end-ckeckout-->
         <%@include file="/jsp/footer.jsp" %>
     </body>
 </html>

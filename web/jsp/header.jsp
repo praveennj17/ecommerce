@@ -24,7 +24,7 @@
                                 <li><a href="product.do?action=showAll">Product</a></li>
 
                                 <c:if test="${user.role eq 'admin'}">
-                                    <li><a href="adminhome.do">Manage Products</a></li>
+                                    <li><a href="manage.do?action=manage">Manage Products</a></li>
                                 </c:if>
 
                             </ul>
