@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="ckeckout-top">
                     <div class=" cart-items heading">
-                        <h1>My Shopping Bag (3)</h1>
+                        <h1>My Shopping Bag </h1>
 
 
                         <div class="in-check" >
@@ -21,20 +21,20 @@
                                 <li><span>Quantity</span></li>
                                 <div class="clearfix"> </div>
                             </ul>
-
+                            
+                            <c:forEach var="product" items="${productForm.productList}">
                             <ul class="cart-header simpleCart_shelfItem">
 
-                                <li class="ring-in"><a href="#" ><img src="images/c.jpg" class="img-responsive" alt=""></a>
+                                <li class="ring-in"><a href="#" ><img src="${product.image}" class="img-responsive" alt=""></a>
                                 </li>
-                                <li><span>Bracelets</span></li>
-                                <li><span class="item_price">$ 290.00</span></li>
+                                <li><span>${product.name}</span></li>
+                                <li><span class="item_price">${product.price}</span></li>
                                 <li><span class="item_price">1</span></li>
                                 <li> <a href="#" class="add-cart cart-check">Remove</a></li>
                                 
                                 <div class="clearfix"> </div>
-                                
-                            
-                            </ul>
+                              </ul>
+                           </c:forEach>
                                 <a href="" class="add-cart">Checkout</a>
                         </div>
                     </div>  

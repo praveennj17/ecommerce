@@ -61,7 +61,16 @@
                 parameter="action"
                 type="com.ziletech.app.action.CartAction">
             <forward name="products"  path="/jsp/product/product.jsp"/>
-            
+           
+        </action>
+        
+           <action input="/jsp/home/cart.jsp" 
+                name="productForm" 
+                path="/checkout" 
+                scope="request" 
+                parameter="action"
+                type="com.ziletech.app.action.CheckoutAction">
+            <forward name="carts"  path="/jsp/cart/cart.jsp"/>
            
         </action>
         

@@ -13,15 +13,8 @@ public class ProductForm extends LogiwareActionForm{
     private List<Product> productList;
     private Long productId;  //requested parameter
     private Product product; //response product
-    private String addCartSuccess;
+    
 
-    public String getAddCartSuccess() {
-        return addCartSuccess;
-    }
-
-    public void setAddCartSuccess(String addCartSuccess) {
-        this.addCartSuccess = addCartSuccess;
-    }
 
     public Long getProductId() {
         return productId;
