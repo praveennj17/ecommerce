@@ -4,6 +4,7 @@ import com.cong.logiware.hibernate.Domain;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,7 +32,8 @@ public class Cart implements Domain {
     @Column(name = "name")
     private String name;
     
-    @OneToMany(mappedBy = "cart")
+    @OneToMany(mappedBy = "cart",cascade = CascadeType.ALL)
+    
     private List<CartProduct> cartProductList;
 
     public String getName() {

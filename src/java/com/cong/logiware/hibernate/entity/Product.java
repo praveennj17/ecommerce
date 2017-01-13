@@ -1,4 +1,4 @@
-package com.cong.logiware.hibernate.entity;
+  package com.cong.logiware.hibernate.entity;
 
 import com.cong.logiware.hibernate.Domain;
 import javax.persistence.Column;

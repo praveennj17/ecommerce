@@ -17,7 +17,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.DispatchAction;
 import com.cong.logiware.hibernate.BaseHibernateDAO;
-import com.gocatapult.webservice.User;
+import com.cong.logiware.hibernate.entity.User;
 import java.util.Collection;
 import java.util.Date;
 

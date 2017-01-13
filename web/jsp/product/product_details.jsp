@@ -56,7 +56,8 @@
                             <br>    <br>
                             <ul class="bann-btns">
 
-                                <li><a href="" class="item_add">Add To Cart</a></li>					
+                                <li><a href="cart.do?action=cart&productId=${productForm.product.id}" class="item_add">Add To Cart</a></li>	
+                              
                             </ul>
                         </div>
                         <div class="clearfix"> </div>

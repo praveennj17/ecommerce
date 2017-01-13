@@ -33,13 +33,13 @@
                 <div class="search">
 
                     <div class="cart box_1">
-                        <a href="cart.do">
+                        <a href="checkout.do?action=Checkout">
                             <h3>
                                 <img src="images/cart.png" alt=""/>
 
                             </h3>
                         </a>
-                        <p><a href="" class="simpleCart_empty">Empty Cart</a></p>
+                        <p><a href="checkout.do?action=Checkout" class="simpleCart_empty">Empty Cart</a></p>
                     </div> 
 
 

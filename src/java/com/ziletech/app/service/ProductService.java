@@ -20,6 +20,8 @@ public class ProductService {
         List<Product> productList = productDAO.findAll();
         return productList;
     }
+    
+    
 
     public Product getById(Long id) {
         ProductDAO productDAO = new ProductDAO();
