@@ -40,6 +40,7 @@ public class CartAction extends LogiwareDispatchAction {
         cart.getCartProductList().add(cartProduct);
         userDAO.saveOrUpdate(user);
         return mapping.findForward(PRODUCTS);
+        
     }
     
 

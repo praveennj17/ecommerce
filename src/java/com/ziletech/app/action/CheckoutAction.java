@@ -37,7 +37,6 @@ public class CheckoutAction extends LogiwareDispatchAction {
         //List of Cart Product
         List<CartProduct> cartProductList = cart.getCartProductList();
         List<Product> productList = new ArrayList<>();
-
         //Each Cart Product
         for (CartProduct cartProduct : cartProductList) {
             Product product = cartProduct.getProduct();

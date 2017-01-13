@@ -15,7 +15,7 @@
 
     <global-forwards>
         <forward name="home" path="/jsp/home/home.jsp"/>
-        <!--            <forward name="RegistrationPage" path="/jsp/signup.jsp"/>-->
+     
     </global-forwards>
 
     <action-mappings>
@@ -32,9 +32,7 @@
        
         <action path="/loginPage" forward="/jsp/login.jsp"/>
 
-        <!--        <action path="/RegistrationPage" forward="/jsp/registration/signup.jsp"/>-->
-        
-        
+      
         <action input="/jsp/registration/signup.jsp" 
                 name="registrationForm" 
                 path="/registration" 
@@ -64,12 +62,12 @@
            
         </action>
         
-           <action input="/jsp/home/cart.jsp" 
-                name="productForm" 
-                path="/checkout" 
-                scope="request" 
-                parameter="action"
-                type="com.ziletech.app.action.CheckoutAction">
+        <action input="/jsp/home/cart.jsp" 
+                   name="productForm" 
+                   path="/checkout" 
+                   scope="request" 
+                   parameter="action"
+                   type="com.ziletech.app.action.CheckoutAction">
             <forward name="carts"  path="/jsp/cart/cart.jsp"/>
            
         </action>
