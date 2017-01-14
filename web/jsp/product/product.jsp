@@ -16,7 +16,7 @@
                         <c:forEach var="product" items="${productForm.productList}">
 
                             <div class="col-md-4 home-grid">
-                                <div class="home-product-main">
+                                <div class="home-product-main"> 
                                     <div class="home-product-top">
                                         <a href="product.do?action=displayProduct&productId=${product.id}"><img src="${product.image}" alt="" class="img-responsive zoom-img"></a>
                                     </div>

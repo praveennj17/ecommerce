@@ -21,25 +21,14 @@ import org.apache.struts.action.ActionMapping;
  *
  * @author sks
  */
-public class CheckoutAction extends LogiwareDispatchAction {
+public class ShippingAction extends LogiwareDispatchAction {
 
-    private static final String CARTS = "carts";
+    private static final String SHIPPING = "shiping";
 
-    public ActionForward Checkout(ActionMapping mapping, ActionForm form,
+    public ActionForward Shipping(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        ProductForm productForm = (ProductForm) form;
-        UserDAO userDAO = new UserDAO();
-        User user = userDAO.findById(getCurrentUser(request).getId());
-        Cart cart = user.getCart();
-        List<CartProduct> cartProductList = cart.getCartProductList();
-        List<Product> productList = new ArrayList<>();
-        for (CartProduct cartProduct : cartProductList) {
-            Product product = cartProduct.getProduct();
-            productList.add(product);
-        }
-        productForm.setProductList(productList);
-        return mapping.findForward(CARTS);
-    }
 
+        return mapping.findForward(SHIPPING);
+    }
 }

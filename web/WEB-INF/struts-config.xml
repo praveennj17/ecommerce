@@ -11,6 +11,7 @@
         <form-bean name="registrationForm" type="com.ziletech.app.form.RegistrationForm"/>
         <form-bean name="productForm" type="com.ziletech.app.form.ProductForm"/>
         <form-bean name="homeForm" type="com.ziletech.app.form.HomeForm"/>
+         <form-bean name="shippingForm" type="com.ziletech.app.form.ShippingForm"/>
     </form-beans>
 
     <global-forwards>
@@ -31,6 +32,7 @@
         </action>
        
         <action path="/loginPage" forward="/jsp/login.jsp"/>
+
 
       
         <action input="/jsp/registration/signup.jsp" 
@@ -71,6 +73,16 @@
             <forward name="carts"  path="/jsp/cart/cart.jsp"/>
            
         </action>
+         <action input="/jsp/home/cart.jsp" 
+                   name="shippingForm" 
+                   path="/Shiped" 
+                   scope="request" 
+                   parameter="action"
+                   type="com.ziletech.app.action.CheckoutAction">
+<!--            <forward name="shiping"  path="/jsp/cart/Shiping.jsp"/>-->
+           
+        </action>
+              <action path="/Shipping" forward="/jsp/cart/Shiping.jsp"/>
         
         <action input="/jsp/home/home.jsp" 
                 name="homeForm" 
