@@ -55,5 +55,4 @@ public class ProductAction extends LogiwareDispatchAction {
         return mapping.findForward(MANAGE_PRODUCT);
     }
 
-  
 }

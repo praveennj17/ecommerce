@@ -18,24 +18,26 @@
                                 <li><span>Product Name</span></li>
                                 <li><span>Description</span></li>
                                 <li><span>Unit Price</span></li>
-                                <li><span>Quantity</span></li>
+                                <!--                                <li><span>Quantity</span></li>-->
                                 <div class="clearfix"> </div>
                             </ul>
 
                             <ul class="cart-header simpleCart_shelfItem">
-                                <cong:form action="addProduct.do?action=addProduct" method="post" name="adminproductForm">
+                                <cong:form action="addproduct.do?action=Addproduct" method="post" name="adminproductForm">
                                     <li class="ring-in"><a href="#" ><img src="images/c.jpg" class="img-responsive" alt=""></a>
                                     </li>
+
+
                                     <li><span><cong:text name="category"/></span></li>
                                     <li><span><cong:text name="name"/></span></li>
 
                                     <li><span><cong:text name="description"/></span></li>
-                                    <li><span><cong:text name="price"/></span></li>
+                                    <li><span><cong:text name="price"/></span></li
 
+                                    <li> <input type="submit" value="Submit"> 
 
-                                    <li> <input type="submit" value="Submit">                                            
                                     </cong:form>
-                                <div class="clearfix"> </div>
+                                    <div class="clearfix"> </div>
                             </ul>
 
                         </div>
@@ -54,7 +56,7 @@
                                 <li><span>Product Name</span></li>
                                 <li><span>Description</span></li>
                                 <li><span>Unit Price</span></li>
-                                <li><span>Quantity</span></li>
+                                <!--<li><span>Quantity</span></li>-->
                                 <div class="clearfix"> </div>
                             </ul>
                             <c:forEach var="product" items="${productForm.productList}">
@@ -66,9 +68,10 @@
                                     <li><span>${product.name}</span></li>
                                     <li><span>${product.description}</span></li>
                                     <li><span class="item_price">${product.price}</span></li>
-                                    <li><span class="item_price">1</span></li>
-                                    <li> <a href="#" class="add-cart cart-check">Remove</a>
-                                        <a href="#" class="add-cart cart-check">Edit</a>
+
+                                    <li> <a href="addproduct.do?action=remove&id=${product.id}" class="add-cart cart-check">Remove</a>
+
+                                        <a href="addproduct.do?action=edit&id=${product.id}" class="add-cart cart-check">edit</a>
                                     </li>
 
                                     <div class="clearfix"> </div>

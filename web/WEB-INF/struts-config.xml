@@ -72,8 +72,8 @@
              
           <action input="/jsp/admin/adminhome.jsp" 
                 name="adminproductForm" 
-                path="/addProduct" 
-                scope="session" 
+                path="/addproduct" 
+                scope="request" 
                 parameter="action"
                 type="com.ziletech.app.action.AddProductAction">
             <forward name="addProductPage"  path="/jsp/admin/adminhome.jsp"/>
