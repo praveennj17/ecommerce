@@ -15,6 +15,7 @@ public class ProductForm extends LogiwareActionForm{
     private Product product; //response product
     
 
+
     public Long getProductId() {
         return productId;
     }

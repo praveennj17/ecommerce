@@ -15,8 +15,9 @@ import org.apache.struts.action.ActionMapping;
  * @author admin
  */
 public class LoginAction extends LogiwareDispatchAction {
-
+ 
     private static final String HOME = "home";
+    private static final String FAILURE = "failure";
     private static final String LOGIN_ERROR = "Wrong username or password!";
 
     public ActionForward login(ActionMapping mapping, ActionForm form,

@@ -17,7 +17,7 @@
 
     <global-forwards>
         <forward name="home" path="/jsp/home/home.jsp"/>
-        <!--            <forward name="RegistrationPage" path="/jsp/signup.jsp"/>-->
+     
     </global-forwards>
 
     <action-mappings>
@@ -29,26 +29,10 @@
                 type="com.ziletech.app.action.LoginAction">
            
             <forward name="failure"  path="/jsp/login.jsp"/>
-            <forward name="products"  path="/jsp/home/product.jsp"/>
+           
         </action>
        
-<!--        <action path="/loginPage" forward="/jsp/login.jsp"/>
 
-        <action path="/RegistrationPage" forward="/jsp/registration/signup.jsp"/>-->
-<!--        <action path="/adminhome" forward="/jsp/admin/adminhome.jsp"/>-->
- 
-        
-<!--        <action input="/jsp/registration/signup.jsp" 
-                name="registrationForm" 
-                path="/registration" 
-                scope="session" 
-                parameter="action"
-                type="com.ziletech.app.action.RegistrationAction">
-            <forward name="success"  path="/jsp/login.jsp"/>
-        </action>
-        -->
-        <action path="/" forward="/loginPage.do"/>
-        
         <action input="/jsp/home/product.jsp" 
                 name="productForm" 
                 path="/product" 
@@ -78,6 +62,25 @@
                 type="com.ziletech.app.action.AddProductAction">
             <forward name="addProductPage"  path="/jsp/admin/adminhome.jsp"/>
       
+        </action>
+        <action input="/jsp/home/product_details.jsp" 
+                name="productForm" 
+                path="/cart" 
+                scope="request" 
+                parameter="action"
+                type="com.ziletech.app.action.CartAction">
+            <forward name="products"  path="/jsp/product/product.jsp"/>
+           
+        </action>
+        
+        <action input="/jsp/home/cart.jsp" 
+                   name="productForm" 
+                   path="/checkout" 
+                   scope="request" 
+                   parameter="action"
+                   type="com.ziletech.app.action.CheckoutAction">
+            <forward name="carts"  path="/jsp/cart/cart.jsp"/>
+           
         </action>
         
         <action input="/jsp/home/home.jsp" 

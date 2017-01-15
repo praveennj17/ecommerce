@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="banner-main">
                     <div class="col-md-6 banner-left">
-                        <a href="single.html"><img src="images/ba.png" alt="" class="img-responsive"></a>
+                        <a href="product.do?action=showAll"><img src="images/ba.png" alt="" class="img-responsive"></a>
                     </div>
 
                     <div class="clearfix"> </div>
