@@ -1,3 +1,4 @@
+
 <!--header strat here-->
 <div class="header">
     <div class="container">
@@ -21,7 +22,11 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="home.do">Home</a></li>
                                 <li><a href="product.do?action=showAll">Product</a></li>
-                                <li><a href="product.do?action=showAll">Manage Products</a></li>
+
+                                <c:if test="${user.role eq 'admin'}">
+                                    <li><a href="manage.do?action=manage">Manage Products</a></li>
+                                </c:if>
+
                             </ul>
                         </div>
                         <!--/.navbar-collapse-->
@@ -41,6 +46,7 @@
                         </a>
                         <p><a href="checkout.do?action=Checkout" class="simpleCart_empty">Empty Cart</a></p>
                     </div> 
+
 
 
                     <div class="head-signin">

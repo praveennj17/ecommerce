@@ -27,5 +27,12 @@ public class ProductDAO extends BaseHibernateDAO<Product> {
         return findByProperties(properties);
     }
 
+    public void delete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
 
+
+
+   

@@ -14,6 +14,7 @@ import javax.persistence.Table;
 
 /**
  * No FK instead use Entity Class
+ *
  * @author sunil
  */
 @Entity
@@ -32,11 +33,21 @@ public class User implements Domain {
     private String password;
     @Column(name = "email")
     private String email;
-    @JoinColumn(name="cart_id")
+
+    @Column(name = "role")
+    private String role;
+    @JoinColumn(name = "cart_id")
     @OneToOne(cascade = CascadeType.ALL)
     private Cart cart;
-    
-   
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public User() {
     }
 
@@ -73,7 +84,7 @@ public class User implements Domain {
     }
 
     public Cart getCart() {
-        if(cart == null){
+        if (cart == null) {
             cart = new Cart();
         }
         return cart;
@@ -82,12 +93,10 @@ public class User implements Domain {
     public void setCart(Cart cart) {
         this.cart = cart;
     }
-    
+
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email + '}';
+        return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email + ", role=" + role + '}';
     }
 
-   
-   
 }

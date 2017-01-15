@@ -1,4 +1,4 @@
-package com.cong.logiware.struts;
+ package com.cong.logiware.struts;
 
 import com.cong.logiware.constant.CommonConstant;
 import com.cong.logiware.constant.FormConstant;

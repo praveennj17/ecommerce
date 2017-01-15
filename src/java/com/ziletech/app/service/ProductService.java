@@ -13,7 +13,7 @@ import java.util.Map;
 public class ProductService {
 
     //1. what will be input type and number of inputs, arguments or parameter
-    //2. What it will perform.
+    //2. What it will  perform.
     //3. What it will return. 
     public List<Product> getAllProducts() {
         ProductDAO productDAO = new ProductDAO();

@@ -35,9 +35,15 @@ CREATE TABLE `cart_product` (
 ALTER TABLE `user`
 ADD COLUMN `cart_id` INT NULL AFTER `password`;
 
+--10/01/17 @yulti
+ALTER TABLE `cart` DROP COLUMN `useridfk`, DROP COLUMN `productidfk`,    CHANGE `quantity` `name` VARCHAR(255) NULL ;
 
 
+--11/01/17 @yulti
+ALTER TABLE `user`     ADD COLUMN `role` VARCHAR(20) NULL AFTER `cart_id`;
 
+--12/01/17 @yulti
+ALTER TABLE `product`     CHANGE `id` `id` INT(9) NOT NULL AUTO_INCREMENT,    ADD PRIMARY KEY(`id`);
 
 
 
