@@ -32,8 +32,8 @@
                                     <li><span><cong:text name="name"/></span></li>
 
                                     <li><span><cong:text name="description"/></span></li>
-                                    <li><span><cong:text name="price"/></span></li
-
+                                    <li><span><cong:text name="price"/></span></li>
+                                    <li><span><cong:hidden name="id"/></span></li>
                                     <li> <input type="submit" value="Submit"> 
 
                                     </cong:form>

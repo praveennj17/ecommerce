@@ -27,6 +27,7 @@ public class AddProductAction extends LogiwareDispatchAction {
 
         ProductDAO productDAO = new ProductDAO();
         Product product = new Product();
+product.setId(adminProdcutForm.getId());
         product.setCategory(adminProdcutForm.getCategory());
         product.setName(adminProdcutForm.getName());
         product.setDescription(adminProdcutForm.getDescription());
@@ -46,7 +47,7 @@ public class AddProductAction extends LogiwareDispatchAction {
         AdminProductForm adminProdcutForm = (AdminProductForm) form;
 
         Product product = new ProductService().getById(adminProdcutForm.getId());
-
+        adminProdcutForm.setId(product.getId());
         adminProdcutForm.setCategory(product.getCategory());
         adminProdcutForm.setName(product.getName());
         adminProdcutForm.setDescription(product.getDescription());
