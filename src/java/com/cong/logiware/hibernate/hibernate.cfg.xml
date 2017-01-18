@@ -7,5 +7,6 @@
         <mapping class="com.cong.logiware.hibernate.entity.Product"/>
         <mapping class="com.cong.logiware.hibernate.entity.CartProduct"/>
         <mapping class="com.cong.logiware.hibernate.entity.Cart"/>
+        <mapping class="com.cong.logiware.hibernate.entity.Address"/>
     </session-factory>
 </hibernate-configuration>

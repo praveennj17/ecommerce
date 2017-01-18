@@ -9,12 +9,12 @@ import com.cong.logiware.struts.LogiwareActionForm;
 public class ShippingForm extends LogiwareActionForm {
 
     private String fullName;
-    private String mobilenumber;
-    private int pincode;
-    private String enterAddressAddressLine1;
-    private String enterAddressAddressLine2;
-    private String towncity;
+    private String houseno;
+    private String street;
+    private String city;
     private String state;
+    private int pincode;
+    private String mobileno;
 
     public String getFullName() {
         return fullName;
@@ -24,44 +24,45 @@ public class ShippingForm extends LogiwareActionForm {
         this.fullName = fullName;
     }
 
-    public String getMobilenumber() {
-        return mobilenumber;
+    public String getHouseno() {
+        return houseno;
     }
 
-    public void setMobilenumber(String mobilenumber) {
-        this.mobilenumber = mobilenumber;
+    public void setHouseno(String houseno) {
+        this.houseno = houseno;
     }
 
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getMobileno() {
+        return mobileno;
+    }
+
+    public void setMobileno(String mobileno) {
+        this.mobileno = mobileno;
+    }
+
+ 
     public int getPincode() {
         return pincode;
     }
 
     public void setPincode(int pincode) {
         this.pincode = pincode;
-    }
-
-    public String getEnterAddressAddressLine1() {
-        return enterAddressAddressLine1;
-    }
-
-    public void setEnterAddressAddressLine1(String enterAddressAddressLine1) {
-        this.enterAddressAddressLine1 = enterAddressAddressLine1;
-    }
-
-    public String getEnterAddressAddressLine2() {
-        return enterAddressAddressLine2;
-    }
-
-    public void setEnterAddressAddressLine2(String enterAddressAddressLine2) {
-        this.enterAddressAddressLine2 = enterAddressAddressLine2;
-    }
-
-    public String getTowncity() {
-        return towncity;
-    }
-
-    public void setTowncity(String towncity) {
-        this.towncity = towncity;
     }
 
     public String getState() {
@@ -71,6 +72,5 @@ public class ShippingForm extends LogiwareActionForm {
     public void setState(String state) {
         this.state = state;
     }
-
 
 }

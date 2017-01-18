@@ -35,7 +35,7 @@
                                 <div class="clearfix"> </div>
                               </ul>
                            </c:forEach>
-                                <a href="Shiped.do?shipping" class="add-cart">Checkout</a>
+                                <a href="PlaceOrder.do?action=shipping" class="add-cart">Checkout</a>
                         </div>
                     </div>  
                 </div>

@@ -1,19 +1,24 @@
 package com.cong.logiware.hibernate.entity;
 
 import com.cong.logiware.hibernate.Domain;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
  * No FK instead use Entity Class
+ *
  * @author sunil
  */
 @Entity
@@ -32,13 +37,25 @@ public class User implements Domain {
     private String password;
     @Column(name = "email")
     private String email;
-    @JoinColumn(name="cart_id")
+    @JoinColumn(name = "cart_id")
     @OneToOne(cascade = CascadeType.ALL)
     private Cart cart;
-    
-   
+
+       
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Address> addressList = new ArrayList<>();
+
     public User() {
     }
+
+    public List<Address> getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List<Address> addressList) {
+        this.addressList = addressList;
+    }
+ 
 
     public Long getId() {
         return id;
@@ -73,7 +90,7 @@ public class User implements Domain {
     }
 
     public Cart getCart() {
-        if(cart == null){
+        if (cart == null) {
             cart = new Cart();
         }
         return cart;
@@ -82,12 +99,10 @@ public class User implements Domain {
     public void setCart(Cart cart) {
         this.cart = cart;
     }
-    
+
     @Override
     public String toString() {
         return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email + '}';
     }
 
-   
-   
 }

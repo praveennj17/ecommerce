@@ -75,14 +75,14 @@
         </action>
          <action input="/jsp/home/cart.jsp" 
                    name="shippingForm" 
-                   path="/Shiped" 
+                   path="/PlaceOrder" 
                    scope="request" 
                    parameter="action"
-                   type="com.ziletech.app.action.CheckoutAction">
-<!--            <forward name="shiping"  path="/jsp/cart/Shiping.jsp"/>-->
+                   type="com.ziletech.app.action.ShippingAction">
+            <forward name="shiping"  path="/jsp/cart/Shiping.jsp"/>
            
         </action>
-              <action path="/Shipping" forward="/jsp/cart/Shiping.jsp"/>
+ 
         
         <action input="/jsp/home/home.jsp" 
                 name="homeForm" 

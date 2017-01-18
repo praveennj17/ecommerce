@@ -33,8 +33,10 @@ public class CheckoutAction extends LogiwareDispatchAction {
         User user = userDAO.findById(getCurrentUser(request).getId());
         Cart cart = user.getCart();
         List<CartProduct> cartProductList = cart.getCartProductList();
+       
         List<Product> productList = new ArrayList<>();
         for (CartProduct cartProduct : cartProductList) {
+           
             Product product = cartProduct.getProduct();
             productList.add(product);
         }
